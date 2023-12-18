@@ -1,0 +1,32 @@
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+
+  schemas:
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Internal server error
+      required:
+        - message
+
+    ScrapperPostRequestBody:
+      type: object
+      properties:
+        search:
+          type: string
+          example: zapatos
+        page:
+          type: integer
+          example: 1
+      required:
+        - search
+
+    ScrapperPostResponseBody:
+      type: object
+      properties:
+      required:
