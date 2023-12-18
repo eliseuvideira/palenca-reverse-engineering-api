@@ -29,4 +29,27 @@ components:
     ScrapperPostResponseBody:
       type: object
       properties:
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                example: "1184230001"
+              name:
+                type: string
+                example: Botas Chelsea de tacón
+              price:
+                type: string
+                example: $1,129.00
+              link:
+                type: string
+                example: https://www2.hm.com/es_mx/productpage.1184230001.html
+            required:
+              - id
+              - name
+              - price
+              - link
       required:
+        - items
